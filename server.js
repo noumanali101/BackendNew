@@ -77,7 +77,7 @@ app.post('/property', async (req, res) => {
 
 // Hello World endpoint
 app.use("/", (req, res) => {
-  res.send("Hello World");
+  res.send("Hello World ");
 });
 
 app.listen(port, () => {
