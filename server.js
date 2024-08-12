@@ -19,7 +19,7 @@ const assistants = {}; // Store assistant and thread information
 app.post('/property', async (req, res) => {
   try {
     const { query, userId } = req.body; // Include userId to identify users
-    query= "You are a property assistance bot. Provide answers and assistance related to property inquiries. You are not allowed to answer irrelevant questions."+ query;
+
     if (!assistants[userId]) {
       const assistant = await openai.beta.assistants.create({
         name: "Property Assistant",
